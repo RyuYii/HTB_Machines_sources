@@ -1,0 +1,46 @@
+conectarse no fue gran cosa, puedes hacerlo por la vpn o la maquina que te proveen, ahi va el primer flag
+
+para la parte de diggin in se tiene que usar la herramienta dig y encontrar la url oculta, luego buscar la forma de conectarse a la url
+
+░▒▓    /home/kali/HTB_Machines_sources/FORTRESSES/JET  on   main ?1 ▓▒░ dig @10.13.37.10 -x 10.13.37.10                                                                              ░▒▓ 100 ✘  with # ▓▒░
+
+; <<>> DiG 9.16.15-Debian <<>> @10.13.37.10 -x 10.13.37.10
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 21672
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;10.37.13.10.in-addr.arpa.      IN      PTR
+
+;; AUTHORITY SECTION:
+37.13.10.in-addr.arpa.  604800  IN      SOA     www.securewebinc.jet. securewebinc.jet. 3 604800 86400 2419200 604800
+
+;; Query time: 128 msec
+;; SERVER: 10.13.37.10#53(10.13.37.10)
+;; WHEN: Tue Jun 15 10:16:59 EDT 2021
+;; MSG SIZE  rcvd: 109
+
+para ir de manera mas profunda buscamos en el source para encontrar un script que nos mostrara una url mas oculta todavia
+
+para acceder al sistema es bueno utilizar sqlmap y crackstation
+
+t'
+do you want to crack them via a dictionary-based attack? [y/N/q]
+Database: jetadmin
+Table: users
+[1 entry]
++----+------------------------------------------------------------------+----------+
+| id | password                                                         | username |
++----+------------------------------------------------------------------+----------+
+| 1  | 97114847aa12500d04c0ef3aa6ca1dfd8fca7f156eeb864ab9b0445b235d5084 | admin    |
++----+------------------------------------------------------------------+----------+
+
+[16:18:32] [INFO] table 'jetadmin.users' dumped to CSV file '/root/.local/share/sqlmap/output/www.securewebinc.jet/dump/jetadmin/users.csv'
+[16:18:32] [INFO] you can find results of scanning in multiple targets mode inside the CSV file '/root/.local/share/sqlmap/output/results-06152021_0407pm.csv'
+
+[*] ending @ 16:18:32 /2021-06-15/
