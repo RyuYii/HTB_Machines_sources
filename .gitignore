@@ -1,2 +1,3 @@
 .venv
 **hydra.restore
+*.ovpn
