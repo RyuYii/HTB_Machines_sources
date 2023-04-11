@@ -1,0 +1,5 @@
+# Nmap 7.93 scan initiated Sun Apr  9 21:22:34 2023 as: nmap -sS --min-rate 5000 -vvv -n --open -Pn -p- -oG allports 10.10.208.99
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.208.99 ()	Status: Up
+Host: 10.10.208.99 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 2049/open/tcp//nfs///, 38855/open/tcp/////, 40475/open/tcp/////, 41591/open/tcp/////, 53165/open/tcp/////
+# Nmap done at Sun Apr  9 21:22:54 2023 -- 1 IP address (1 host up) scanned in 19.52 seconds
