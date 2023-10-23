@@ -1,3 +1,43 @@
 .venv
 **hydra.restore
 TryHackMe/RyuYiiTryHackMe.ovpn
+
+# Archivos y directorios generados por Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite
+*.log
+*.jinja2
+
+# Entornos virtuales (por ejemplo, venv, virtualenv)
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+env1/
+venv1/
+
+# Archivos de registro y otros generados por la ejecución
+logs/
+*.log
+*.log.*
+*.log-*
+*.log?*
+*.log[0-9]*
+
+# Carpeta de resultados de pruebas
+htmlcov/
+
+# Carpetas generadas por el IDE y editores de código
+.idea/
+.vscode/
+
+# Dependencias generadas por pip
+requirements.txt
+requirements-dev.txt
+venv/
