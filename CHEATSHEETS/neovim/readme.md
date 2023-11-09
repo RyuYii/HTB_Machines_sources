@@ -1,22 +1,25 @@
-# NeoVim
+# Neovim
 
-Para la instalacion de NeoVim en una distribucion debian
+Un editor de texto que se puede usar en la terminal, es descendiente de vim y todo lo que sabes de vim lo puedes usar aqui (si es que sabes xD).
 
-Se necesita el siguiente comando
+Para comenzar, se que es dificil usar este editor de texto por todos los atajos que debes conocer.
 
-`sudo apt install neovim`
+Por eso existe esta pagina [Vim Adventures](https://vim-adventures.com/) la cual nos permite aprender jugando un poco, a la fecha de este commit esta disponible asi que si para cuando lo leas ya no existe, pues yo creo que habra un mejor editor u otra pagina similar a esta.
 
-Luego se crea el directorio de configuracion
+## Lunar Vim
 
-`mkdir .config/nvim`
+Debido a que Neovim es casi igual que vim pues su interfaz no es muy amigable para principiantes, lo bueno es que puedes modificar y personalizarlo a tu gusto, solo que igual es muy dificultuoso, asi que [Lunar vim](https://www.lunarvim.org/es/) uno de las muchas configuraciones predefinidas que existen te puede dar una buena configuracion inicial.
 
-en ese directorio creamos el archivo init.vim
+### Consejos de instalacion que no vienen en la pagina.
 
-`touch init.vim`
+#### Instalar fuentes
 
-la configuracion estara en la carpeta de archivos de configuraicion en el directorio de cheatsheets del repositorio
+Te da la pagina de fuentes, y es importante para los iconos que tienen, algunas veces
 
-Tampoco hay que olvidarse de crear el directorio para los plugins, los cuales se instalan dentro del editor con la
-sentencia :PlugInstall
+#### Ultima version de neovim
 
-esto hara que se instalen los plugins definidos en el archivo init.vim 
+En algunas distros te instalara por defecto una version de neovim no compatible, asi que tendras que instalar de manera manual para que no te de errores.
+
+#### NPM
+
+Para agregar la extension de node, necesita permisos de manera global, asegurate de que se puedan instalar dependencias de manera global, si no sigue la guia que te muestra.
